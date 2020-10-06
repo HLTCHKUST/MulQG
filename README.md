@@ -21,10 +21,10 @@ Multi-hop Question Generation (QG) aims to generate answer-related questions by 
 <img src="plot/main.png" width="100%" />
 </p>
 
-Overview of our MulQG framework. In the encoding stage, we pass the initial context encoding \\[C_0\\] and answer encoding \\[A_0\\] to the *Answer-aware Context Encoder* to obtain the first context encoding \\[C_1\\], then \\[C_1\\] and \\[A_0\\] will be used to update a multi-hop answer encoding \\[A_1\\] via the *GCN-based Entity-aware Answer Encoder*, and we use \\[A_1\\] and \\[C_1\\] back to the *Answer-aware Context Encoder* to obtain \\[C_2\\]. The final context encoding \\[C_{final}\\] are obtained from the *Encoder Reasoning Gate* which operates over \\[C_1\\] and \\[C_2\\], and will be used in the max-out based decoding stage.
+Overview of our MulQG framework. In the encoding stage, we pass the initial context encoding \\(C_0\\) and answer encoding \\(A_0\\) to the *Answer-aware Context Encoder* to obtain the first context encoding \\(C_1\\), then \\(C_1\\) and \\(A_0\\) will be used to update a multi-hop answer encoding \\(A_1\\) via the *GCN-based Entity-aware Answer Encoder*, and we use \\(A_1\\) and \\(C_1\\) back to the *Answer-aware Context Encoder* to obtain \\(C_2\\). The final context encoding \\(C_{final}\\) are obtained from the *Encoder Reasoning Gate* which operates over \\(C_1\\) and \\(C_2\\), and will be used in the max-out based decoding stage.
 
 <p align="center">
-<img src="plot/graph.png" width="100%" />
+<img src="plot/graph.png" width="40%" />
 </p>
 
 The illustration of GCN-based Entity-aware Answer Encoder.
