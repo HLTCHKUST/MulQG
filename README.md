@@ -5,7 +5,7 @@
 
 This is the implementation of the paper:
 
-**Multi-hop Question Generation with Graph Convolutional Network**. **Dan Su**, [Yan Xu](https://yana-xuyan.github.io), [Wenlng Dai](https://wenliangdai.github.io), Ziwei Ji, Tiezheng Yu, Pascale Fung **Findings of EMNLP 2020** [[PDF]](TBC)
+**Multi-hop Question Generation with Graph Convolutional Network**. **Dan Su**, [Yan Xu](https://yana-xuyan.github.io), [Wenliang Dai](https://wenliangdai.github.io), Ziwei Ji, Tiezheng Yu, Pascale Fung **Findings of EMNLP 2020** [[PDF]](TBC)
 
 If you use any source codes or datasets included in this toolkit in your work, please cite the following paper. The bibtex is listed below:
 <pre>
