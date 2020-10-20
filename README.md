@@ -9,7 +9,12 @@ This is the implementation of the paper:
 
 If you use any source codes or datasets included in this toolkit in your work, please cite the following paper. The bibtex is listed below:
 <pre>
-TBC
+@article{su2020multihop,
+  title={Multi-hop Question Generation with Graph Convolutional Network},
+  author={Dan Su and Yan Xu and Wenliang Dai and Ziwei Ji and Tiezheng Yu and Pascale Fung},
+  journal={arXiv preprint arXiv:2010.09240},
+  year={2020}
+}
 </pre>
 
 ## Abstract
