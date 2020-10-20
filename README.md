@@ -11,7 +11,7 @@ If you use any source codes or datasets included in this toolkit in your work, p
 <pre>
 @article{su2020multihop,
   title={Multi-hop Question Generation with Graph Convolutional Network},
-  author={Dan Su and Yan Xu and Wenliang Dai and Ziwei Ji and Tiezheng Yu and Pascale Fung},
+  author={Su, Dan and Xu, Yan and Dai, Wenliang and Ji, Ziwei and Yu, Tiezheng and Fung, Pascale},
   journal={arXiv preprint arXiv:2010.09240},
   year={2020}
 }
