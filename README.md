@@ -156,6 +156,8 @@ then you will get the *QBLEU4* as in (according to the paper, this should be the
 ```
 Mean Answerability Score Across Questions: 0.540
 ```
+
+```
 python3 answerability_score.py --data_type squad --ref_file ./prediction/golden.txt --hyp_file ./prediction/candidate.txt --ner_weight 0.6 --qt_weight 0.2 --re_weight 0.1 --delta 1.0 --ngram_metric Bleu_4
 ```
 
