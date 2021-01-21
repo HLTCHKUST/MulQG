@@ -52,7 +52,7 @@ pip install -r requirement.txt
 
 ### Download Data
 
-#### HotpotQA Data
+#### * HotpotQA Data
 Download the [hotpot QA train and test data](https://github.com/hotpotqa/hotpot) and put them under `./hotpot/data/`.
 
 #### Glove Embedding
