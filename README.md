@@ -9,10 +9,11 @@ This is the implementation of the paper:
 
 If you use any source codes or datasets included in this toolkit in your work, please cite the following paper. The bibtex is listed below:
 <pre>
-@article{su2020multihop,
+@inproceedings{su2020multi,
   title={Multi-hop Question Generation with Graph Convolutional Network},
   author={Su, Dan and Xu, Yan and Dai, Wenliang and Ji, Ziwei and Yu, Tiezheng and Fung, Pascale},
-  journal={arXiv preprint arXiv:2010.09240},
+  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: Findings},
+  pages={4636--4647},
   year={2020}
 }
 </pre>
