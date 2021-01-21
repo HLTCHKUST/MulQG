@@ -52,7 +52,7 @@ pip install -r requirement.txt
 
 ### Download Data
 
-#### * HotpotQA Data
+#### HotpotQA Data
 Download the [hotpot QA train and test data](https://github.com/hotpotqa/hotpot) and put them under `./hotpot/data/`.
 
 #### Glove Embedding
@@ -64,13 +64,30 @@ You should download and set bert pretrained model and vocabulary properly.
 You can find the download links in *paragraph_selection/pytorch_pretrained_bert/modeling.py* row **40-51**, and *paragraph_selection/pytorch_pretrained_bert/tokenization.py* row **30-41**.
 After you finish downloading, you should replace the dict value with your own local path accordingly.
 
-### Preprocess 
-* Step 1.3: Download other pertained models we provided via [link](https://drive.google.com/drive/folders/167ttUA68L9eVPDni3oh1JIc_28dkAW1P?usp=sharing)
+### Preprocessed Data
+
+You can directly download our preprocessed train & dev data of HotpotQA from the [link](https://drive.google.com/drive/folders/1zV03LosHm55RLOJoRoF0KwXB9bm7Z7zH?usp=sharing) 
+
+Extract all compressed files into **./hotpot/** folder.
+
+Also you can preprocess by yourself following the instructions in the next section.
+
+#### Preprocess 
+
+Previously we provided intermediate data files for training MulQG. Now you can also run the following preprocessing.
+The preprocessing phase consists of paragraph selection, named entity recognition, and graph construction.
+
+
+* Step 1.1: First, download model checkpoints and save them in **./work_dir** 
+- [bert_ner.pt](https://drive.google.com/file/d/1KneaQDpZ3uWXUEQCS-nC4OQQT8VBsLJr/view?usp=sharing)
+- [para_select_model.bin](https://drive.google.com/file/d/10kTPjd-OXXROzqAyz8vVuWBNvuwolHA1/view?usp=sharing)
+
 
 * Step 2: Run the data preprocessing (change the input and output path to your own)
 ```
 sh ./run_preprocess.sh
 ```
+
 * Step 3: Run the process_hotpot.py (to obtain the `embedding.pkl` and `word2idx.pkl`)
 
 <span style="background-color: blue"> **Or you can skip the previuos preprocessing step and directly download all the preprocessed files and pre-trained models from the [link](https://drive.google.com/drive/folders/167ttUA68L9eVPDni3oh1JIc_28dkAW1P)** </span>
