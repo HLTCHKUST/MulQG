@@ -37,12 +37,20 @@ The illustration of GCN-based Entity-aware Answer Encoder.
 
 
 ## Dependencies
-You can use `conda` environment yml file (multi-qg.yml) to create your conda environment by running
+python 3, pytorch, boto3
+
+Or you can use `conda` environment yml file (multi-qg.yml) to create your conda environment by running
 ```
 conda env create -f multi-qg.yml
 ```
+or try the 
+```
+pip install -r requirement.txt
+```
 
 ## Experiments
+
+#Download Data
 
 * Step 1.1: Download the [hotpot QA train and test data](https://github.com/hotpotqa/hotpot) and put them under `./hotpot/data/`.
 * Step 1.2: Download the glove embedding and unzip 'glove.840B.300d.txt' and put it under `./glove/glove.840B.300d.txt`
