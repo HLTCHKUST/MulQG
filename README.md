@@ -80,4 +80,4 @@ sh ./run_inference.sh
 ### Released Checkpoints
 
 We also released our pretrained model for reproduction.
-* [multi-hop-QG](https://drive.google.com/file/d/1NCMDg8j3VsvQ3ul1FjBk6l_TT9c7urQB/view?usp=sharing)
+* [MulQG_BFS.tar.gz](https://drive.google.com/file/d/1NCMDg8j3VsvQ3ul1FjBk6l_TT9c7urQB/view?usp=sharing)
