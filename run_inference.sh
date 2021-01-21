@@ -1,1 +1,1 @@
-nohup python3 -m GPG.main --notrain --use_cuda --ans_update --q_attn --is_coverage --use_copy --batch_size=20 --beam_search --gpus=0 --position_embeddings_flag --restore="./output/GraphPointerGenerator/2.0665851369196053_checkpoint.pt" > inference_20200525.log &
+nohup python3 -m GPG.main --notrain --max_tgt_len=30 --min_tgt_len=8 --beam_size=10 --use_cuda --ans_update --q_attn --is_coverage --use_copy --batch_size=20 --beam_search --gpus=0 --position_embeddings_flag --restore="./output/GraphPointerGenerator/MulQG_BFS_checkpoint.pt" > inference.log &

@@ -45,7 +45,6 @@ dependencies:
   - zlib=1.2.11=h7b6447c_3
   - zstd=1.3.7=h0b5b093_0
   - pip:
-    - answerability-metric==1.0
     - boto3==1.13.15
     - botocore==1.16.15
     - chardet==3.0.4
