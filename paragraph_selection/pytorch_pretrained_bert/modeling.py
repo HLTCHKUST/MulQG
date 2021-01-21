@@ -38,8 +38,6 @@ from .file_utils import cached_path
 logger = logging.getLogger(__name__)
 
 PRETRAINED_MODEL_ARCHIVE_MAP = {
-    # 'bert-base-uncased': "/home/yunxuanxiao/xyx/data/BERT_Pretrained/bert-base-uncased.tar.gz",
-    # 'bert-base-cased': "/home/yunxuanxiao/xyx/data/BERT_Pretrained/bert-base-cased.tar.gz",
     'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz",
     'bert-large-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased.tar.gz",
     'bert-base-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz",

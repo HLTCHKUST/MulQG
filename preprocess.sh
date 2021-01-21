@@ -11,7 +11,7 @@ mkdir ${WORK_DIR}/${OUTPUT_DIR}
 python paragraph_selection/select_paras_QG.py \
     --input_path=${INPUT_FILE} \
     --output_path=${WORK_DIR}/${OUTPUT_DIR}/selected_paras_QG.json \
-    --ckpt_path=${WORK_DIR}/para_select_model.bin \
+    --ckpt_path=work_dir/para_select_model.bin \
     --split=${OUTPUT_DIR}
 
 python bert_ner/predict.py \
