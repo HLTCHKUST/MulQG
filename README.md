@@ -50,7 +50,7 @@ pip install -r requirement.txt
 
 ## Experiments
 
-# Download Data
+### Download Data
 
 * Step 1.1: Download the [hotpot QA train and test data](https://github.com/hotpotqa/hotpot) and put them under `./hotpot/data/`.
 * Step 1.2: Download the glove embedding and unzip 'glove.840B.300d.txt' and put it under `./glove/glove.840B.300d.txt`
@@ -77,3 +77,7 @@ sh ./run_inference.sh
 
 * Step 6: Do the evaluation. We calculate the **BLEU** and **METOR**, and **ROUGE** score via [**nlg-eval**](https://github.com/Maluuba/nlg-eval), and the **Answerability** and **QBLEU** metrics via [Answeriblity-Metric](https://github.com/PrekshaNema25/Answerability-Metric). You may need to install them.
 
+### Released Checkpoints
+
+We also released our pretrained model for reproduction.
+* [multi-hop-QG]()
