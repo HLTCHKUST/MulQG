@@ -96,18 +96,48 @@ sh ./run_preprocess.sh
 We also released our pretrained model for reproduction.
 * [MulQG_BFS.tar.gz](https://drive.google.com/file/d/1NCMDg8j3VsvQ3ul1FjBk6l_TT9c7urQB/view?usp=sharing)
 
+### Training
 
 * Step 4: Run the training  (Change the configuration file in config.py with proper data path, eg, the log path, the output model path, so on)
 
 ```
 sh ./run_train.sh 
 ```
+If an OOM exception occurs, you may try to set a smaller batch size with gradient_accumulate_step > 1.
 
-* Step 5: Do the inference, and the prediction results will be under `./prediction/` (you may modify other configurations in `GPG/config.py` file)
+Your checkpoints in each epoch will be stored in  *./output/* directory respectively. 
+
+### Inference
+
+* Step 5: Do the inference, and the prediction results will be under *./prediction/*  (you may modify other configurations in *GPG/config.py* file)
 ```
 sh ./run_inference.sh
 ```
+You can do the inference using our released model [MulQG_BFS.tar.gz](https://drive.google.com/file/d/1NCMDg8j3VsvQ3ul1FjBk6l_TT9c7urQB/view?usp=sharing), with the following command:
+
+```
+python3 -m GPG.main --notrain --max_tgt_len=30 --min_tgt_len=8 --beam_size=10 --use_cuda --ans_update --q_attn --is_coverage --use_copy --batch_size=20 --beam_search --gpus=0 --position_embeddings_flag --restore="./output/GraphPointerGenerator/MulQG_BFS_checkpoint.pt"
+
+```
+
+### Evaluation
 
 * Step 6: Do the evaluation. We calculate the **BLEU** and **METOR**, and **ROUGE** score via [**nlg-eval**](https://github.com/Maluuba/nlg-eval), and the **Answerability** and **QBLEU** metrics via [Answeriblity-Metric](https://github.com/PrekshaNema25/Answerability-Metric). You may need to install them.
 
+We also upload our prediction output as in *./prediction/* directory, using *nlg-eval* packages via:
+
+```
+nlg-eval --hypothesis=./prediction/candidate.txt --references=./predictioin/golden.txt
+```
+
+you will get *nlg-eval* results like:
+
+```
+Bleu_1: 0.401475
+Bleu_2: 0.267142
+Bleu_3: 0.197256
+Bleu_4: 0.151990
+METEOR: 0.205085
+ROUGE_L: 0.352992
+```
 
