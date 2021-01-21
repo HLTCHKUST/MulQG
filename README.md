@@ -54,7 +54,7 @@ sh ./run_preprocess.sh
 ```
 * Step 3: Run the process_hotpot.py (to obtain the `embedding.pkl` and `word2idx.pkl`)
 
-<span style="background-color: #FFFF00">Or you can skip the previuos preprocessing step and directly download all the preprocessed files and pre-trained models from the [link](https://drive.google.com/drive/folders/167ttUA68L9eVPDni3oh1JIc_28dkAW1P)</span>
+<span style="background-color: #FFFF00"> Or you can skip the previuos preprocessing step and directly download all the preprocessed files and pre-trained models from the [link](https://drive.google.com/drive/folders/167ttUA68L9eVPDni3oh1JIc_28dkAW1P) </span>
 
 * Step 4: Run the training  (Change the configuration file in config.py with proper data path, eg, the log path, the output model path, so on)
 
