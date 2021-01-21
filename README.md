@@ -146,3 +146,20 @@ METEOR: 0.205085
 ROUGE_L: 0.352992
 ```
 
+Also, follow the instructions [Answeriblity-Metric](https://github.com/PrekshaNema25/Answerability-Metric) to measure the *Answerability* and *QBLEU* metircs.
+
+```
+python3 answerability_score.py --data_type squad --ref_file ./prediction/golden.txt --hyp_file ./prediction/candidate.txt --ner_weight 0.6 --qt_weight 0.2 --re_weight 0.1 --delta 0.7 --ngram_metric Bleu_4
+```
+then you will get the *QBLEU4* as in (according to the paper, this should be the QBLEU-4 value, just ignore the words)
+
+```
+Mean Answerability Score Across Questions: 0.540
+```
+python3 answerability_score.py --data_type squad --ref_file ./prediction/golden.txt --hyp_file ./prediction/candidate.txt --ner_weight 0.6 --qt_weight 0.2 --re_weight 0.1 --delta 1.0 --ngram_metric Bleu_4
+```
+
+then you will get the *Answerability* :
+```
+Mean Answerability Score Across Questions: 0.728
+```
