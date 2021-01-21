@@ -44,24 +44,28 @@ conda env create -f multi-qg.yml
 
 ## Experiments
 
-* Download the [hotpot QA train and test data](https://github.com/hotpotqa/hotpot) and put them under `./hotpot/data/`.
+* Step 1.1: Download the [hotpot QA train and test data](https://github.com/hotpotqa/hotpot) and put them under `./hotpot/data/`.
+* Step 1.2: Download the glove embedding and unzip 'glove.840B.300d.txt' and put it under `./glove/glove.840B.300d.txt`
+* Step 1.3: Download other pertained models we provided via [link](https://drive.google.com/drive/folders/167ttUA68L9eVPDni3oh1JIc_28dkAW1P?usp=sharing)
 
-* Run the preprocessing 
+* Step 2: Run the data preprocessing (change the input and output path to your own)
+```
+sh ./run_preprocess.sh
+```
+* Step 3: Run the process_hotpot.py (to obtain the `embedding.pkl` and `word2idx.pkl`)
 
-```console
-❱❱❱ sh ./run_preprocess.sh
+<mark>Or you can skip the previuos preprocessing step and directly download all the preprocessed files and pre-trained models from the [link](https://drive.google.com/drive/folders/167ttUA68L9eVPDni3oh1JIc_28dkAW1P)</mark>
+
+* Step 4: Run the training  (Change the configuration file in config.py with proper data path, eg, the log path, the output model path, so on)
+
+```
+sh ./run_train.sh 
 ```
 
-* Download the glove embedding and unzip 'glove.840B.300d.txt' and put it under `./glove/glove.840B.300d.txt`
-
-* Run the process_hotpot.py (to obtain the `embedding.pkl` and `word2idx.pkl`)
-
-* Download other pertained models we provided via [link](https://drive.google.com/drive/u/2/folders/167ttUA68L9eVPDni3oh1JIc_28dkAW1P)
-
-Or you can skip the previuos preprocessing step and directly download all the preprocessed files and pre-trained models from the [link](https://drive.google.com/drive/folders/167ttUA68L9eVPDni3oh1JIc_28dkAW1P)
-
-* Run the training  (Change the configuration file in config.py with proper data path, eg, the log path, the output model path, so on)
-
-```console
-❱❱❱ sh ./run_train.sh 
+* Step 5: Do the inference, and the prediction results will be under `./prediction/` (you may modify other configurations in `GPG/config.py` file)
 ```
+sh ./run_inference.sh
+```
+
+* Step 6: Do the evaluation. We calculate the **BLEU** and **METOR**, and **ROUGE** score via [**nlg-eval**](https://github.com/Maluuba/nlg-eval), and the **Answerability** and **QBLEU** metrics via [Answeriblity-Metric](https://github.com/PrekshaNema25/Answerability-Metric). You may need to install them.
+
