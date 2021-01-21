@@ -72,15 +72,15 @@ Extract all compressed files into **./hotpot/** folder.
 
 Also you can preprocess by yourself following the instructions in the next section.
 
-#### Preprocess 
+### Preprocess 
 
 Previously we provided intermediate data files for training MulQG. Now you can also run the following preprocessing.
 The preprocessing phase consists of paragraph selection, named entity recognition, and graph construction.
 
 
 * Step 1.1: First, download model checkpoints and save them in **./work_dir** 
-- [bert_ner.pt](https://drive.google.com/file/d/1KneaQDpZ3uWXUEQCS-nC4OQQT8VBsLJr/view?usp=sharing)
-- [para_select_model.bin](https://drive.google.com/file/d/10kTPjd-OXXROzqAyz8vVuWBNvuwolHA1/view?usp=sharing)
+  - [bert_ner.pt](https://drive.google.com/file/d/1KneaQDpZ3uWXUEQCS-nC4OQQT8VBsLJr/view?usp=sharing)
+  - [para_select_model.bin](https://drive.google.com/file/d/10kTPjd-OXXROzqAyz8vVuWBNvuwolHA1/view?usp=sharing)
 
 
 * Step 2: Run the data preprocessing (change the input and output path to your own)
@@ -90,7 +90,6 @@ sh ./run_preprocess.sh
 
 * Step 3: Run the process_hotpot.py (to obtain the `embedding.pkl` and `word2idx.pkl`)
 
-<span style="background-color: blue"> **Or you can skip the previuos preprocessing step and directly download all the preprocessed files and pre-trained models from the [link](https://drive.google.com/drive/folders/167ttUA68L9eVPDni3oh1JIc_28dkAW1P)** </span>
 
 ### Released Checkpoints
 
