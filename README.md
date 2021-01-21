@@ -38,8 +38,8 @@ The illustration of GCN-based Entity-aware Answer Encoder.
 
 ## Dependencies
 You can use `conda` environment yml file (multi-qg.yml) to create your conda environment by running
-``` console
-❱❱❱ conda env create -f multi-qg.yml
+```
+conda env create -f multi-qg.yml
 ```
 
 ## Experiments
