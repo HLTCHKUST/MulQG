@@ -129,7 +129,7 @@ python3 -m GPG.main --notrain --max_tgt_len=30 --min_tgt_len=8 --beam_size=10 --
 
 * Step 6: Do the evaluation. We calculate the **BLEU** and **METOR**, and **ROUGE** score via [**nlg-eval**](https://github.com/Maluuba/nlg-eval), and the **Answerability** and **QBLEU** metrics via [Answeriblity-Metric](https://github.com/PrekshaNema25/Answerability-Metric). You may need to install them.
 
-We also upload our prediction output as in *./prediction/* directory, using *nlg-eval* packages via:
+We also upload our prediction output as in *./prediction/* directory, using [**nlg-eval**](https://github.com/Maluuba/nlg-eval) packages via:
 
 ```
 nlg-eval --hypothesis=./prediction/candidate.txt --references=./predictioin/golden.txt
