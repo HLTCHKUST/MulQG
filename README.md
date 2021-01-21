@@ -98,14 +98,19 @@ We also released our pretrained model for reproduction.
 
 ### Training
 
-* Step 4: Run the training  (Change the configuration file in config.py with proper data path, eg, the log path, the output model path, so on)
+* Step 4: Run the training  
 
 ```
 sh ./run_train.sh 
 ```
-If an OOM exception occurs, you may try to set a smaller batch size with gradient_accumulate_step > 1.
 
-Your checkpoints in each epoch will be stored in  *./output/* directory respectively. 
+```
+python3 -m GPG.main --use_cuda --schedule --ans_update --q_attn --is_coverage --use_copy --batch_size=36 --beam_search --gpus=0,1,2 --position_embeddings_flag
+
+```
+Change the configuration file in *GPG/config.py* with proper data path, eg, the log path, the output model path, so on.
+If an OOM exception occurs, you may try to set a smaller batch size with gradient_accumulate_step > 1.
+Your checkpoints in each epoch will be stored in  *./output/* directory respectively. or you can change the path in *GPG/config.py*.
 
 ### Inference
 
