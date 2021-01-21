@@ -52,8 +52,19 @@ pip install -r requirement.txt
 
 ### Download Data
 
-* Step 1.1: Download the [hotpot QA train and test data](https://github.com/hotpotqa/hotpot) and put them under `./hotpot/data/`.
-* Step 1.2: Download the glove embedding and unzip 'glove.840B.300d.txt' and put it under `./glove/glove.840B.300d.txt`
+#### HotpotQA Data
+Download the [hotpot QA train and test data](https://github.com/hotpotqa/hotpot) and put them under `./hotpot/data/`.
+
+#### Glove Embedding
+Download the glove embedding and unzip 'glove.840B.300d.txt' and put it under `./glove/glove.840B.300d.txt`
+
+#### Bert Models
+We use the Bert models in the paragraph selection part.
+You should download and set bert pretrained model and vocabulary properly.
+You can find the download links in *paragraph_selection/pytorch_pretrained_bert/modeling.py* row **40-51**, and *paragraph_selection/pytorch_pretrained_bert/tokenization.py* row **30-41**.
+After you finish downloading, you should replace the dict value with your own local path accordingly.
+
+### Preprocess 
 * Step 1.3: Download other pertained models we provided via [link](https://drive.google.com/drive/folders/167ttUA68L9eVPDni3oh1JIc_28dkAW1P?usp=sharing)
 
 * Step 2: Run the data preprocessing (change the input and output path to your own)
@@ -63,6 +74,12 @@ sh ./run_preprocess.sh
 * Step 3: Run the process_hotpot.py (to obtain the `embedding.pkl` and `word2idx.pkl`)
 
 <span style="background-color: blue"> **Or you can skip the previuos preprocessing step and directly download all the preprocessed files and pre-trained models from the [link](https://drive.google.com/drive/folders/167ttUA68L9eVPDni3oh1JIc_28dkAW1P)** </span>
+
+### Released Checkpoints
+
+We also released our pretrained model for reproduction.
+* [MulQG_BFS.tar.gz](https://drive.google.com/file/d/1NCMDg8j3VsvQ3ul1FjBk6l_TT9c7urQB/view?usp=sharing)
+
 
 * Step 4: Run the training  (Change the configuration file in config.py with proper data path, eg, the log path, the output model path, so on)
 
@@ -77,7 +94,4 @@ sh ./run_inference.sh
 
 * Step 6: Do the evaluation. We calculate the **BLEU** and **METOR**, and **ROUGE** score via [**nlg-eval**](https://github.com/Maluuba/nlg-eval), and the **Answerability** and **QBLEU** metrics via [Answeriblity-Metric](https://github.com/PrekshaNema25/Answerability-Metric). You may need to install them.
 
-### Released Checkpoints
 
-We also released our pretrained model for reproduction.
-* [MulQG_BFS.tar.gz](https://drive.google.com/file/d/1NCMDg8j3VsvQ3ul1FjBk6l_TT9c7urQB/view?usp=sharing)
