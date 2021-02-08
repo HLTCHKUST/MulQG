@@ -1,7 +1,7 @@
 import torch
 from torch import nn
-from GPG.embedding import GloveEmbeddings, BertEmbeddings
 from GPG.models.model_utils import init_wt_normal
+from GPG.embedding import GloveEmbeddings, BertEmbeddings
 import numpy as np
 import os
 import sys

@@ -14,7 +14,7 @@ python paragraph_selection/select_paras_QG.py \
     --ckpt_path=work_dir/para_select_model.bin \
     --split=${OUTPUT_DIR}
 
-python bert_ner/predict.py \
+python bert_ner/predict_QG.py \
     --ckpt_path=work_dir/bert_ner.pt \
     --input_path=${WORK_DIR}/${OUTPUT_DIR}/selected_paras_QG.json \
     --output_path=${WORK_DIR}/${OUTPUT_DIR}/entities.json

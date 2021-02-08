@@ -29,9 +29,9 @@ class GraphPointerGenerator(nn.Module):
         super(GraphPointerGenerator, self).__init__()
         self.config = config
 
-        self.encoder = GraphFusionEncoder_Base(self.config, embeddings)
+        # self.encoder = GraphFusionEncoder_Base(self.config, embeddings)
         # self.decoder = Pointer_Decoder_Base(self.config, embeddings)
-        # self.encoder = GraphFusionEncoder(self.config, embeddings)
+        self.encoder = GraphFusionEncoder(self.config, embeddings)
         self.decoder = Decoder(self.config, embeddings)
 
         if config.notrain:

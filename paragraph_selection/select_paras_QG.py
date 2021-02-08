@@ -283,7 +283,6 @@ def get_paras_gold_only(source_data, output_path):
                 para_ids.append(i)
     json.dump(Paragraphs, open(output_path, 'w'))
 
-########### this funtion added by sudan /??#############
 
 def get_supporting_docs_only(source_data, output_path):
     # + Negative Sample.
@@ -336,12 +335,8 @@ if __name__ == "__main__":
 
     # Load a trained model that you have fine-tuned
     # model_state_dict = torch.load(args.ckpt_path)
-    # print("-------- this is debug sudan  (1) -------")
-    # print(model_state_dict)
     
     # model = BertForSequenceClassification.from_pretrained(args.bert_model, state_dict=model_state_dict)
-    # print("-------- this is debug sudan   (2)-------")
-    # print(model)
     # model.cuda()
     # model = torch.nn.DataParallel(model)
     # tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
