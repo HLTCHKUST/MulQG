@@ -1,4 +1,3 @@
-from GPG.encoders.rnn_encoder import RNNEncoder
 from GPG.encoders.layers import ReasonLayer, AnsUpdateLayer, ReduceState, Reason_Ans_InterBlocks
 from GPG.models.model_utils import cal_position_id_2
 import torch
